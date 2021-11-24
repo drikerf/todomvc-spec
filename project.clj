@@ -1,4 +1,4 @@
-(defproject todomvc "0.0.1-SNAPSHOT"
+(defproject todomvc "1.0.0-SNAPSHOT"
   :description "TodoMVC: Clojure Spec"
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.773"]
