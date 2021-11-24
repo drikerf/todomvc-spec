@@ -1,0 +1,10 @@
+diff --git a/src/todomvc/components/title.cljc b/src/todomvc/components/title.cljc
+index ce6be32..2697aa5 100644
+--- a/src/todomvc/components/title.cljc
++++ b/src/todomvc/components/title.cljc
+@@ -12,4 +12,4 @@
+            (query/view-has? % :h1 {:content "todos"})))
+ 
+ (rum/defc component [_]
+-  [:h1 "todos"])
++  [:h2 "todos"])

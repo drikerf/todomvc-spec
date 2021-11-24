@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Combine first row from first run with the second report for 1,10,20,...,100
+
+hyperfine --export-csv benchmark.csv --warmup 3 --min-runs 10 --parameter-scan n 1 10 --parameter-step-size 1 'bin/test {n}'
+
+hyperfine --export-csv benchmark_100.csv --warmup 3 --min-runs 10 --parameter-scan n 10 100 --parameter-step-size 10 'bin/test {n}'

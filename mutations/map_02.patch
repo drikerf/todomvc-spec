@@ -1,0 +1,12 @@
+diff --git a/src/todomvc/components/todo_edit.cljc b/src/todomvc/components/todo_edit.cljc
+index 194e3e9..7bab447 100644
+--- a/src/todomvc/components/todo_edit.cljc
++++ b/src/todomvc/components/todo_edit.cljc
+@@ -25,7 +25,6 @@
+      #(when editing? (.focus (rum/deref ref))))
+     [:input.edit#todo-edit
+      {:type "text"
+-      :ref ref
+       :value title
+       :on-change #(dispatch :update-todo (-> % .-target .-value))
+       :on-blur #(dispatch :save-todo)

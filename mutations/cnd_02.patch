@@ -1,0 +1,11 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..9b31a03 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -263,5 +263,5 @@
+   (->> todos
+        (filter #(case status
+                   "all" true
+-                  "active" (not (:completed? %))
++                  "activ" (not (:completed? %))
+                   "completed" (:completed? %)))))

@@ -1,0 +1,11 @@
+diff --git a/src/todomvc/components/todos_filters.cljc b/src/todomvc/components/todos_filters.cljc
+index ebb4edd..e856426 100644
+--- a/src/todomvc/components/todos_filters.cljc
++++ b/src/todomvc/components/todos_filters.cljc
+@@ -18,5 +18,5 @@
+ (rum/defc component [state]
+   [:ul.filters
+    (map
+-    #(rum/with-key (todos-filter/component state %) %)
++    #(rum/with-key (todos-filter/component state %) nil)
+     ["all" "active" "completed"])])

@@ -1,0 +1,5 @@
+^{:watch-dirs ["src"]
+  :css-dirs ["resources/public/css"]
+  :open-url false
+  :hawk-options {:watcher :polling}}
+{:main todomvc.main}

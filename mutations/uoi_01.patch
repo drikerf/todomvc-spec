@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 71a04ce..1dd3e36 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -245,7 +245,7 @@
+ (defn completed-todos [state]
+   (->> state
+        (:todos)
+-       (filter :completed?)))
++       (filter (comp not :completed?))))
+ 
+ (s/fdef visible-todos
+   :args (s/cat :state ::spec/state)

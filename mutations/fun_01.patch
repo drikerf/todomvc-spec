@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/components/app.cljc b/src/todomvc/components/app.cljc
+index 8165f7f..95fb64a 100644
+--- a/src/todomvc/components/app.cljc
++++ b/src/todomvc/components/app.cljc
+@@ -29,7 +29,7 @@
+    [:.todoapp
+     (title/component state)
+     (todo-input/component state)
+-    (when (seq todos)
++    (when (sequential? todos)
+       [:.main
+        (todos-toggle/component state)
+        (todos-list/component state)])

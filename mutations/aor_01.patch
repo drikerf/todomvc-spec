@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..be695bc 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -24,7 +24,7 @@
+     (if-let [curr (->> todos
+                        (map :id)
+                        (apply max))]
+-      (inc curr)
++      (dec curr)
+       0)
+     0))
+ 

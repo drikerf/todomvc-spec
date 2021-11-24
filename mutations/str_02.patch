@@ -1,0 +1,10 @@
+diff --git a/src/todomvc/components/todos_count.cljc b/src/todomvc/components/todos_count.cljc
+index 6e6f76e..0bb4b50 100644
+--- a/src/todomvc/components/todos_count.cljc
++++ b/src/todomvc/components/todos_count.cljc
+@@ -19,4 +19,4 @@
+      [:strong todo-count]
+      [:span
+       (if (or (< 1 todo-count) (= 0 todo-count))
+-        " items left" " item left")]]))
++        "items left" " item left")]]))

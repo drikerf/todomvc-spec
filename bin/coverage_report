@@ -1,0 +1,11 @@
+#!/bin/bash
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+echo "n,formcov,linecov"
+start=${1-1}
+step=${2-1}
+end=${3-1}
+for i in $(seq $start $step $end)
+do
+    N_TESTS=$i ENABLE_PBT=1 lein coverage | awk -v n_tests=$i -f $SCRIPT_DIR/extract_coverage.awk | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g'
+done

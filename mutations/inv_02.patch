@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/components/todos_toggle.cljc b/src/todomvc/components/todos_toggle.cljc
+index 5647bdf..dfd2d88 100644
+--- a/src/todomvc/components/todos_toggle.cljc
++++ b/src/todomvc/components/todos_toggle.cljc
+@@ -22,7 +22,7 @@
+   [:span
+    [:input.toggle-all#toggle-all
+     {:type "checkbox"
+-     :on-change #(dispatch :toggle-all)
++     :on-change (dispatch :toggle-all)
+      :checked (= (count (core/completed-todos state))
+                  (count (:todos state)))}]
+    [:label

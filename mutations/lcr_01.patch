@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..bfd547e 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -60,7 +60,7 @@
+                (= (:todos after) (:todos before))))))
+ 
+ (defn create-todo! [{:keys [input] :as state}]
+-  (if (and (seq (:value input))
++  (if (or (seq (:value input))
+            (seq (string/trim (:value input))))
+     (let [todo {:id (next-id state)
+                 :title (string/trim (:value input))

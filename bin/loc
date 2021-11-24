@@ -1,0 +1,3 @@
+#!/bin/bash
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cloc --by-file-by-lang --exclude-list-file=$SCRIPT_DIR/.cloc_excludes src test

@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..db6e1c6 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -217,7 +217,7 @@
+ (defn set-filter [state path]
+   (if (s/valid? ::spec/status-link path)
+     (let [status (last (clojure.string/split path #"/" 2))]
+-      (assoc-in state [:filter :status]
++      (assoc-in state [:filter :staatus]
+                 (if (seq status) status "all")))
+     state))
+ 

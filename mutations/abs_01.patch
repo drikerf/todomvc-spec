@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..5af208a 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -67,7 +67,7 @@
+                 :completed? false}]
+       (-> state
+           (update :todos #(concat % [todo]))
+-          (assoc-in [:input :value] "")))
++          (assoc-in [:input :value] "t")))
+     state))
+ 
+ (s/fdef remove-todo!

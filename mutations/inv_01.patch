@@ -1,0 +1,11 @@
+diff --git a/src/todomvc/components/todo_destroy.cljc b/src/todomvc/components/todo_destroy.cljc
+index 27fd753..bc2da72 100644
+--- a/src/todomvc/components/todo_destroy.cljc
++++ b/src/todomvc/components/todo_destroy.cljc
+@@ -15,5 +15,5 @@
+ 
+ (rum/defc component [_ {:keys [id]}]
+   [:button.destroy
+-   {:on-click #(dispatch :remove-todo! id)}])
++   {:on-click (dispatch :remove-todo! id)}])
+ 

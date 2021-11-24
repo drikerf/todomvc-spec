@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..8cf5404 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -181,7 +181,7 @@
+   (-> state
+       (update :todos (fn [xs]
+                        (map #(if (= id (:id %))
+-                               (update % :completed? not) %)
++                               % (update % :completed? not))
+                             xs)))))
+ 
+ (s/fdef toggle-all

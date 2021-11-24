@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..ab5072a 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -66,7 +66,7 @@
+                 :title (string/trim (:value input))
+                 :completed? false}]
+       (-> state
+-          (update :todos #(concat % [todo]))
++          (update :todos #(cons todo %))
+           (assoc-in [:input :value] "")))
+     state))
+ 

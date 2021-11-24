@@ -1,0 +1,3 @@
+#!/bin/bash
+
+N_TESTS=$1 ENABLE_PBT=1 lein coverage

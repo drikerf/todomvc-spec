@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..bdfda80 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -259,7 +259,7 @@
+                "active" (every? (comp not :completed?) todos)
+                "completed" (every? :completed? todos)))))
+ 
+-(defn visible-todos [{:keys [todos] {:keys [status]} :filter}]
++(defn visible-todos [{:keys [todos] {:keys [status]} :filters}]
+   (->> todos
+        (filter #(case status
+                   "all" true

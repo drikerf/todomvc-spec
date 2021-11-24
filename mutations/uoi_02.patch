@@ -1,0 +1,13 @@
+diff --git a/src/todomvc/core.cljc b/src/todomvc/core.cljc
+index 1a90293..09f6f53 100644
+--- a/src/todomvc/core.cljc
++++ b/src/todomvc/core.cljc
+@@ -110,7 +110,7 @@
+ (defn edit-todo [state id]
+   (-> state
+       (update :todos (fn [xs]
+-                       (map #(if (= id (:id %))
++                       (map #(if (not= id (:id %))
+                                (assoc % :editing? true)
+                                (dissoc % :editing?))
+                             xs)))))

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -e 's/bin\/test //g' -e 's/command/n/g' $1 | awk -F ',' '{ print $1 "," $2 "," $3 }'

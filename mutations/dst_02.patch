@@ -1,0 +1,17 @@
+diff --git a/src/todomvc/components/todo_edit.cljc b/src/todomvc/components/todo_edit.cljc
+index 194e3e9..7acf421 100644
+--- a/src/todomvc/components/todo_edit.cljc
++++ b/src/todomvc/components/todo_edit.cljc
+@@ -19,10 +19,10 @@
+                              :on-blur ::spec/event-handler
+                              :value (-> % :args :todo :title)})))
+ 
+-(rum/defc component [_ {:keys [title editing?]}]
++(rum/defc component [_ {:keys [title editing]}]
+   (let [ref (rum/use-ref nil)]
+     (rum/use-effect!
+-     #(when editing? (.focus (rum/deref ref))))
++     #(when editing (.focus (rum/deref ref))))
+     [:input.edit#todo-edit
+      {:type "text"
+       :ref ref

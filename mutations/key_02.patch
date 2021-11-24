@@ -1,0 +1,10 @@
+diff --git a/src/todomvc/components/todos_list.cljc b/src/todomvc/components/todos_list.cljc
+index 120320a..2165bc8 100644
+--- a/src/todomvc/components/todos_list.cljc
++++ b/src/todomvc/components/todos_list.cljc
+@@ -26,4 +26,4 @@
+   [:ul.todo-list
+    (->> (core/visible-todos state)
+         (map
+-         #(rum/with-key (todo-item/component state %) (:id %))))])
++         #(rum/with-key (todo-item/component state %) (:i %))))])
